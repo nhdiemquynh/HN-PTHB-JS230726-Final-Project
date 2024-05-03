@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, Pagination, theme } from 'antd';
+import { Alert, Carousel, Pagination, theme } from 'antd';
 import Marquee from 'react-fast-marquee';
 import { getMovies } from '../controllers/api/movies.controller';
 import SlideCarousel from '../components/Slide';
@@ -29,7 +29,7 @@ const HomePage = () => {
         style={{
           background: colorBgContainer,
           minHeight: 280,
-          padding: 0,
+          padding: '30px 0',
           borderRadius: borderRadiusLG,
         }}
       >
@@ -42,17 +42,22 @@ const HomePage = () => {
           }
         />
         <SlideCarousel />
-        <div>
+        <Carousel style={{margin: '20px 0'}} slidesToShow={6} autoplay={true} autoplaySpeed={2000} margin={20}>
           {movies.map((movie) => (
-            <div key={movie.id}>
-              <a href={movie.movie_path}>
-                <h2>{movie.title}</h2>
-                <p>{movie.description}</p>
-              </a>
+            <div style={{padding: '20px'}}>
+              <div key={movie.id} style={{ padding: '0 10px', background: '#ffffff' }}>
+                <a href={movie.movie_path}>
+                  <img src='https://images2.thanhnien.vn/528068263637045248/2024/3/21/phimquaivatparasytethegrey-1711018941499514734847.png' style={{width: '100%'}}/>
+                  <h2>{movie.title}</h2>
+                  <p>{movie.description}</p>
+                </a>
+              </div>
             </div>
           ))}
+        </Carousel>
+        <div style={{margin: '20px 0', textAlign: 'center'}}>
+          <Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
         </div>
-        <Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
       </div>
     </>
   );

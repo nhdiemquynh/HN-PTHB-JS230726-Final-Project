@@ -13,6 +13,7 @@ async function bootstrap() {
       credentials: true,
       origin: true
     });
+    // Setting port 2000
     await app.listen(2000);
   } catch (error) {}
 }
