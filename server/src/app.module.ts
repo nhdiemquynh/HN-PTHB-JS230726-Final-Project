@@ -9,6 +9,8 @@ import { CategoriesModule } from './categories/categories.module';
 import { HistorysModule } from './historys/historys.module';
 import { ActorsModule } from './actors/actors.module';
 import { moviveActorModule } from './movie_actors/movie_actors.module';
+import { AuthModule } from './auth/auth.module';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -19,6 +21,7 @@ import { moviveActorModule } from './movie_actors/movie_actors.module';
     HistorysModule,
     ActorsModule,
     moviveActorModule,
+    AuthModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',

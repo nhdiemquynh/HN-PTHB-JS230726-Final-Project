@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
+import { AuthService } from './auth.service';
+import { AuthController } from './auth.controller';
+import { User } from 'src/users/users.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './users.entity';
-import { UsersService } from './users.service';
-import { ApiUsersController } from './users.controller';
-import { JwtModule } from '@nestjs/jwt';
+import { JwtModule, JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [TypeOrmModule.forFeature([User]),
@@ -11,7 +11,7 @@ import { JwtModule } from '@nestjs/jwt';
     secret: 'YOUR_SECRET_KEY',
     signOptions: { expiresIn: '1h' }, // Thời gian hết hạn của token
   })],
-  providers: [UsersService],
-  controllers: [ApiUsersController],
+  providers: [AuthService],
+  controllers: [AuthController],
 })
-export class UsersModule {}
+export class AuthModule {}

@@ -15,16 +15,16 @@ const SlideCarousel = () => {
   return (<>
     <Carousel autoplay>
       <div>
-        <h3 style={contentStyle}>1</h3>
+        <img src='https://cdn.nguyenkimmall.com/images/companies/_1/tin-tuc/review/phim/ju-on-the-grudge-loi-nguyen.jpg' style={{ width: 'auto', maxHeight: '300px', margin: 'auto', display: 'block'}}/>
       </div>
       <div>
-        <h3 style={contentStyle}>2</h3>
+        <img src='https://cdn.nguyenkimmall.com/images/detailed/744/phim-ma-kinh-di-hay-nhat-chieu-rap.jpg' style={{ width: 'auto', maxHeight: '300px', margin: 'auto', display: 'block'}}/>
       </div>
       <div>
-        <h3 style={contentStyle}>3</h3>
+        <img src='https://gcs.tripi.vn/public-tripi/tripi-feed/img/474112IQW/top-15-phim-ma-kinh-di-thai-lan-hay-nhat_084114378.jpg' style={{ width: 'auto', maxHeight: '300px', margin: 'auto', display: 'block'}}/>
       </div>
       <div>
-        <h3 style={contentStyle}>4</h3>
+        <img src='https://simg.zalopay.com.vn/zlp-website/assets/Phim_kinh_di_Tinh_nguoi_duyen_ma_633fd0f9fe.jpg' style={{ width: 'auto', maxHeight: '300px', margin: 'auto', display: 'block'}}/>
       </div>
     </Carousel>
   </>);

@@ -20,7 +20,7 @@ const HeaderMain = () => {
 
   if (categories.length > 0) {
     items = categories.map((item, index) => ({
-      key: index + 1,
+      key: item?.id,
       label: item?.name,
       title: item?.name,
       onClick: () => {
@@ -36,11 +36,15 @@ const HeaderMain = () => {
         alignItems: 'center',
       }}
     >
-      <div className="demo-logo" />
+      <div className="demo-logo" >
+        <a href={'/'}>
+        <img src={'/logo192.png'} alt={'sfsdf'} style={{ width: 50, height: 50, display: 'block', margin: 'auto' }}/>
+        </a>
+      </div>
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['2']}
+        defaultSelectedKeys={[]}
         items={items}
         style={{
           flex: 1,

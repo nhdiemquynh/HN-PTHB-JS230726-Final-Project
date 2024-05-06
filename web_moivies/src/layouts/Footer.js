@@ -8,6 +8,7 @@ const FooterMain = () => {
     background: '#fff',
     padding: '8px 0',
     margin: '16px 0',
+    minHeight: '200px',
   };
 
   return (
@@ -26,35 +27,61 @@ const FooterMain = () => {
       >
         <Col className="gutter-row" span={6}>
           <div style={style}>
-            <image src={'./logo.svg'} alt={'sfsdf'} />
+            <a href="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+              <img src={'/logo192.png'} alt={'sfsdf'} style={{ width: '80px', height: '80px', margin: 'auto', display: 'block' }}/>
+            </a>
           </div>
         </Col>
         <Col className="gutter-row" span={6}>
           <div style={style}>
-            <h3>Phim mới</h3>
-            <ul className='list-menu'>
-              <li>
-                <a>Khoa học</a>
+            <h3>Được quan tâm</h3>
+            <ul className='list-menu' style={{ padding: '0', listStyle: 'none' }}>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Phim đang chiếu</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Phim lẻ</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Phim bộ</a>
               </li>
             </ul>
           </div>
         </Col>
         <Col className="gutter-row" span={6}>
           <div style={style}>
-            <h3>Phim mới</h3>
-            <ul className='list-menu'>
-              <li>
-                <a>Khoa học</a>
+            <h3>Thông tin</h3>
+            <ul className='list-menu' style={{ padding: '0', listStyle: 'none' }}>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Về chúng tôi</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Liên hệ</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Chính sách bảo mật</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Khiếu nại bản quyền</a>
               </li>
             </ul>
           </div>
         </Col>
         <Col className="gutter-row" span={6}>
           <div style={style}>
-            <h3>Phim mới</h3>
-            <ul className='list-menu'>
-              <li>
-                <a>Khoa học</a>
+            <h3>Quốc gia</h3>
+            <ul className='list-menu' style={{ padding: '0', listStyle: 'none' }}>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Trung quốc</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Hàn quốc</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Nhật bản</a>
+              </li>
+              <li style={{ padding: '0', listStyle: 'none' }}>
+                <a>Việt nam</a>
               </li>
             </ul>
           </div>
@@ -65,8 +92,8 @@ const FooterMain = () => {
         banner
         message={
           <Marquee pauseOnHover gradient={false}>
-            Đăng ký ngay để nhận được thông báo về các bộ phim mới nhất <a href='/register'>Đăng ký</a>
-          </Marquee>
+              <a href='/register'>Đăng ký ngay </a>&nbsp; để nhận được thông báo về các bộ phim mới nhất
+            </Marquee>
         }
       />
       <p>

@@ -52,9 +52,8 @@ const DetailMovie = () => {
           margin: '16px 0',
         }}
       >
-        <Breadcrumb.Item>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>List</Breadcrumb.Item>
-        <Breadcrumb.Item>App</Breadcrumb.Item>
+        <Breadcrumb.Item>Phim</Breadcrumb.Item>
+        <Breadcrumb.Item>{id}</Breadcrumb.Item>
       </Breadcrumb>
       <div
         style={{
@@ -62,11 +61,12 @@ const DetailMovie = () => {
           padding: 0,
         }}
       >
-        <Carousel slidesToShow={3} autoplay={true} autoplaySpeed={2000} margin={20}>
+        <Carousel style={{margin: '20px 0'}} slidesToShow={6} autoplay={true} autoplaySpeed={2000} margin={20}>
           {movies.map((movie) => (
             <div style={{padding: '20px'}}>
               <div key={movie.id} style={{ padding: '0 10px', background: '#ffffff' }}>
                 <a href={movie.movie_path}>
+                  <img src='https://images2.thanhnien.vn/528068263637045248/2024/3/21/phimquaivatparasytethegrey-1711018941499514734847.png' style={{width: '100%'}}/>
                   <h2>{movie.title}</h2>
                   <p>{movie.description}</p>
                 </a>

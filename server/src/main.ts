@@ -8,7 +8,7 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     
     app.enableCors({
-      allowedHeaders: 'Content-Type, Accept, Access-Control-Allow-Origin',
+      allowedHeaders: 'Content-Type, Accept, Access-Control-Allow-Origin, Authorization',
       methods: "GET,PUT,POST,DELETE,UPDATE,OPTIONS",
       credentials: true,
       origin: true
